@@ -52,5 +52,22 @@
     }
 /*END header*/
 /*second*/
-
+    .second-block{
+        .title{ text-align: center;
+            h2{font: 300 48px/48px 'Open Sans'; color: #464646;    margin-top: 57px;  letter-spacing: 1px;   margin-bottom: 78px;}
+        }
+        .img{ position: relative; margin:0 auto; width: 742px; height: 354px;
+            ul{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; margin: 0; padding: 0;}
+            li{ position: absolute; font: 300 14px/21px 'Open Sans'; color: #464646; list-style-type: none;width: 100%;    letter-spacing: 0.3px;
+                .way{ position: absolute; background-color: #709acf; height: 1px; width: 50px;
+                    &:before,
+                    &:after{content: ''; position: absolute; display: block; background-color: #709acf;}
+                    &:before{ height: 1px;width: 209px; bottom: 73px; transform: rotate(-45deg); right: -177px;}
+                    &:after{ width: 7px; height: 7px; border-radius: 50%; right: -149px; top: -149px;}
+                }
+                &:nth-child(7){        left: 199px;  top: 362px;}
+                &:nth-child(8){    left: 608px; top: 319px; max-width: 230px;}
+            }
+        }
+    }
 /*END second*/
