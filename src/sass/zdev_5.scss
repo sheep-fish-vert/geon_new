@@ -1,51 +1,56 @@
-header{ background-image: url(../images/topbg.jpg); background-position: center top; background-size:cover; padding: 0 15px;
-    .logo-phone{padding: 21px 12px 0 15px;
-        .logo{ float: left;}
-        .phone{ float: right; letter-spacing: 1px;     padding-top: 6px;
-             a{font: 600 42px/42px 'Open Sans'; color: #86bf52; text-decoration: none;}
-        }
-    }
-    .title{font: 300 22px/22px 'Open Sans'; color: #fff; text-align: center;
-        h1{font: 300 60px/60px 'Open Sans';    margin: 12px 0 0;  letter-spacing: 1.5px;}
-        p{ letter-spacing: 0.5px; margin-top: 14px;}
-    }
-    .content{padding: 99px 0 0; }
-    .container{font: 300 14px/18px 'Open Sans'; color: #fff; position: relative;
-        ul{max-width: 304px; width: 100%; float: left;padding:0 66px 0 74px;
-            li{ position: relative;list-style-type: none; min-height: 74px;
-                &:before{content: ''; display: block; position: absolute; top: 0; left: -58px; background-position: left top; background-repeat: no-repeat;}
+/*header*/
+    header{ background-image: url(../images/topbg.jpg); background-position: center top; background-size:cover; padding: 0 15px;
+        .logo-phone{padding: 21px 12px 0 15px;
+            .logo{ float: left;}
+            .phone{ float: right; letter-spacing: 1px;     padding-top: 6px;
+                 a{font: 600 42px/42px 'Open Sans'; color: #86bf52; text-decoration: none;}
             }
-            &:first-child{
-                li{
-                    &:first-child:before{ background-image: url(../images/z01.png); width: 36px; height: 36px;}
-                    &:nth-child(2):before{background-image: url(../images/z02.png); width: 36px; height: 29px; top: 3px;}
-                    &:last-child{    padding-top: 5px;&:before{background-image: url(../images/z03.png); width: 17px; height: 36px; top: -5px; left: -48px;}}
+        }
+        .title{font: 300 22px/22px 'Open Sans'; color: #fff; text-align: center;
+            h1{font: 300 60px/60px 'Open Sans';    margin: 12px 0 0;  letter-spacing: 1.5px;}
+            p{ letter-spacing: 0.5px; margin-top: 14px;}
+        }
+        .content{padding: 99px 0 0; }
+        .container{font: 300 14px/18px 'Open Sans'; color: #fff; position: relative;
+            ul{max-width: 304px; width: 100%; float: left;padding:0 66px 0 74px;
+                li{ position: relative;list-style-type: none; min-height: 74px;
+                    &:before{content: ''; display: block; position: absolute; top: 0; left: -58px; background-position: left top; background-repeat: no-repeat;}
+                }
+                &:first-child{
+                    li{
+                        &:first-child:before{ background-image: url(../images/z01.png); width: 36px; height: 36px;}
+                        &:nth-child(2):before{background-image: url(../images/z02.png); width: 36px; height: 29px; top: 3px;}
+                        &:last-child{    padding-top: 5px;&:before{background-image: url(../images/z03.png); width: 17px; height: 36px; top: -5px; left: -48px;}}
+                    }
+                }
+                &:nth-child(2){max-width: 256px; padding: 0 66px 0 68px;
+                    li{ padding-top: 11px;
+                        &:first-child:before{background-image: url(../images/z04.png); width: 28px; height: 35px; left: -53px;}
+                        &:nth-child(2):before{background-image: url(../images/z05.png); width: 36px; height: 36px; left: -56px; top: 2px;}
+                        &:last-child{ padding-top: 0;&:before{background-image: url(../images/z06.png); width: 36px; height: 38px; left: -56px; top: -3px;}}
+                    }
                 }
             }
-            &:nth-child(2){max-width: 256px; padding: 0 66px 0 68px;
-                li{ padding-top: 11px;
-                    &:first-child:before{background-image: url(../images/z04.png); width: 28px; height: 35px; left: -53px;}
-                    &:nth-child(2):before{background-image: url(../images/z05.png); width: 36px; height: 36px; left: -56px; top: 2px;}
-                    &:last-child{ padding-top: 0;&:before{background-image: url(../images/z06.png); width: 36px; height: 38px; left: -56px; top: -3px;}}
-                }
+
+            .img{ position: absolute; left: 46.5%;      top: -32px;
+                .new-item{ position: absolute;font: 300 16px/20px 'Open Sans'; color: #fff; text-align: center; width: 109px; height: 24px; transform:rotate(90deg); background-color: #ff4a00; text-transform: uppercase;top: 25px;    left: 361px;   padding-top: 3px;    letter-spacing: 1px;}
+            }
+            .way{ height: 1px; width: 468px; background-color: #fff; position: absolute;    bottom: 33px;  left: 15px;
+                &:before,
+                &:after{content: ''; position: absolute; display: block; background-color: #fff;}
+                &:before{ height: 1px;width: 209px; bottom: 73px; transform: rotate(-45deg); right: -177px;}
+                &:after{ width: 7px; height: 7px; border-radius: 50%; right: -149px; top: -149px;}
+
             }
         }
-
-        .img{ position: absolute; left: 46.5%;      top: -32px;
-            .new-item{ position: absolute;font: 300 16px/20px 'Open Sans'; color: #fff; text-align: center; width: 109px; height: 24px; transform:rotate(90deg); background-color: #ff4a00; text-transform: uppercase;top: 25px;    left: 361px;   padding-top: 3px;    letter-spacing: 1px;}
-        }
-        .way{ height: 1px; width: 468px; background-color: #fff; position: absolute;    bottom: 33px;  left: 15px;
-            &:before,
-            &:after{content: ''; position: absolute; display: block; background-color: #fff;}
-            &:before{ height: 1px;width: 209px; bottom: 73px; transform: rotate(-45deg); right: -177px;}
-            &:after{ width: 7px; height: 7px; border-radius: 50%; right: -149px; top: -149px;}
-
+        .button-row{ width: 100%;    margin-top: -4px; position: relative;    padding-bottom: 41px;
+            a{font: 700 16px/20px 'Open Sans'; color: #fff; background-color: #ff4a00; width: 270px; height: 53px; display: block; margin:0 auto; text-decoration: none; text-align: center;    letter-spacing: 0.5px;
+                padding-top: 17px; transition: all 300ms;
+                &:hover{ background-color: #fff; color: #ff4a00;}
+            }
         }
     }
-    .button-row{ width: 100%;    margin-top: -4px; position: relative;    padding-bottom: 41px;
-        a{font: 700 16px/20px 'Open Sans'; color: #fff; background-color: #ff4a00; width: 270px; height: 53px; display: block; margin:0 auto; text-decoration: none; text-align: center;    letter-spacing: 0.5px;
-            padding-top: 17px; transition: all 300ms;
-            &:hover{ background-color: #fff; color: #ff4a00;}
-        }
-    }
-}
+/*END header*/
+/*second*/
+
+/*END second*/
