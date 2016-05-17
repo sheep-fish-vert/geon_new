@@ -20,11 +20,19 @@ function tabClick() {
         tabsFour();
     });
 }
-
+function sliderInitSix(){
+$('.slick-slider-six').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrow:true
+});
+}
 
 $(document).ready(function(){
     tabsFour();
     tabClick();
+    sliderInitSix();
 });
 
 $(window).load(function(){
