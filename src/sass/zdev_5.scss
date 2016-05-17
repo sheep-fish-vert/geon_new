@@ -60,7 +60,13 @@
         }
         .img{ position: relative; margin:0 auto; width: 742px; height: 354px;
             ul{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; margin: 0; padding: 0;}
-            li{ position: absolute; font: 300 14px/21px 'Open Sans'; color: #464646; list-style-type: none;    letter-spacing: 0.3px; display: inline-block;
+            li{ position: absolute; font: 300 14px/21px 'Open Sans'; color: #464646; list-style-type: none;    letter-spacing: 0.3px; display: inline-block; cursor: default;
+                &:hover{ color: #8dc63f;
+                    .way{ background-color: #8dc63f;
+                        &:before,
+                        &:after{ background-color: #8dc63f};
+                    }
+                }
                 .way{ position: absolute; background-color: #709acf; height: 1px; width: 50px;
                     &:before,
                     &:after{content: ''; position: absolute; display: block; background-color: #709acf;}
@@ -119,3 +125,36 @@
         }
     }
 /*END second*/
+/*four*/
+    .four{
+        .title{ text-align: center;padding-bottom: 54px;
+            h2{font: 300 48px/48px 'Open Sans'; color: #464646;    margin-top: 57px;  letter-spacing: 1px;   margin-bottom: 21px;}
+            p{text-align: center; font:200 20px/1.2 'Open Sans';color: #464646;max-width: 695px;  margin: 0 auto;}
+        }
+        .content{ position: relative;width: 100%; padding: 0 100px; min-height: 550px;}
+        .tab-wrap{ position: absolute; transform-origin: left top; transform: rotate(90deg);left: 100%; top: 0; width: 100%; padding-top: 15px;
+            .tab{font: 300 24px/24px 'Open Sans'; color: #696969; margin-right: 24px; display: inline-block; cursor: pointer; transition: all 300ms;
+                &:hover{color: #B73400;}
+                &.active{ color: #ff4a00;}
+            }
+        }
+        .info-wrap{
+            .info{ display: none;
+                table{width: 100%; }
+
+                tr{
+                    &:first-child{text-align: center; background-color: #ecf0f1; font:600 16px/20px 'Open Sans'; color: #434343;}
+                    &:last-child{
+                        td:before{ display: none;}
+                    }
+                }
+                td{width: 50%; font:300 14px/18px 'Open Sans'; color: #464646; position: relative; padding-left: 15px;
+                    &:before{ content: ''; position: absolute; width: calc(100% - 15px); height: 1px; background-color: #ecf0f1; bottom:0; right:0;}
+                    &:first-child{ padding-left: 0; padding-right: 15px;
+                        &:before{right: auto; left: 0;}
+                    }
+                }
+            }
+        }
+    }
+/*END four*/
