@@ -1,0 +1,18 @@
+/* 8 block */    
+    .eight{ padding: 45px 0 115px; 
+        .title-text h2{ font-size: 48px; font-family: "Open Sans", sans-serif; color: rgb(70, 70, 70); font-weight: 200; line-height: 1.2; text-align: center; }
+        .after-title p{ text-align: center; font-size: 20px; font-family: "Open Sans", sans-serif; color: rgb(70, 70, 70); line-height: 1.2; font-weight: 200; max-width: 695px; margin: 0 auto; }
+        .tabs-block{ padding: 30px 0 0;
+            ul{ list-style-type: none; padding: 0; margin: 0;
+                li{ font-family: "Open Sans", sans-serif;  overflow: hidden;
+                    span{ display: inline-block; padding-bottom: 22px; font-size: 24px;  color: rgb(255, 74, 0);   line-height: 1.667; cursor: pointer;
+                        &:hover{}
+                    }
+                    p{ display: none; margin: 0; padding: 0 0 33px;font-size: 16px; font-weight: 200; font-family: "Open Sans", sans-serif; color: rgb(70, 70, 70);  line-height: 1.875;}
+                    &.active{
+                    }
+                }
+            }
+        }
+    }
+/* 8 block */ 
