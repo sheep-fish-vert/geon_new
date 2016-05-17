@@ -1,0 +1,62 @@
+.third-block{ max-width: 100%; min-height: 715px; background-color: #f5f7f8;
+	.mbox{background: url('../../images/third-block-background.jpg') no-repeat; background-size: cover; background-position: 50% 50%;
+		.slider-vraper{
+			.slide{padding: 45px 0px 0px 0px;position: relative;
+				.upper-block{ max-width: 460px; min-height: 175px; border: 10px solid #fff;padding: 29px 0px 0px 30px;
+					.up-block-header{font: 700  18px/1.2 'Open Sans';
+						
+					}
+					.up-block-content{padding: 10px 0px 0px 0px;font: 200 14px/1.7 'Open Sans'; 
+						
+					}
+				}
+				.central-circle{ background: url('../../images/third-block-circle.png') no-repeat; background-size: cover; max-width: 370px; min-height: 385px; border: 6px solid #2d5daa; border-radius: 50%; position: relative; z-index: 1; margin: 0 auto; top: -60px; left: -70px;font: 200 14px/1.5 'Open Sans'; 
+					.pointer-1{position: absolute;top: 115px; left: -320px;
+						&:after{content: ''; width: 80px; height: 1px; background-color: #f96326; display: block; position: absolute; left: 315px; top: 10px;
+						}
+						.point{content: ''; width: 5px; height: 5px; background-color: #F96326; display: block; position: absolute; border-radius: 50%; left: 395px; top: 8px;} 
+					}
+					.pointer-2{position: absolute;top: 200px; left: -355px;
+						&:after{content: ''; width: 50px; height: 1px; background-color: #f96326; display: block; position: absolute; left: 345px; top: 10px;
+						}
+						.point{ width: 5px; height: 5px; background-color: #F96326; position: absolute; border-radius: 50%; left: 395px; top: 8px;} 
+					}
+					.pointer-3{position: absolute;top: 115px; left: 390px;min-width: 200px;
+						&:after{content: ''; width: 100px; height: 1px; background-color: #f96326; display: block; position: absolute; left: -110px; top: 10px;
+						}
+						.point{ width: 5px; height: 5px; background-color: #F96326; position: absolute; border-radius: 50%; left: -110px; top: 8px;} 
+					}
+					.pointer-4{position: absolute;top: 200px; left: 415px;min-width: 350px;
+						&:after{content: ''; width: 100px; height: 1px; background-color: #f96326; display: block; position: absolute; left: -110px; top: 10px;
+						}
+						.point{ width: 5px; height: 5px; background-color: #F96326; position: absolute; border-radius: 50%; left: -110px; top: 8px;} 	
+					}
+					.pointer-5{position: absolute;top: 285px; left: 415px;min-width: 200px;
+						&:after{content: ''; width: 100px; height: 1px; background-color: #f96326; display: block; position: absolute; left: -120px; top: 10px;
+						}
+						.point{ width: 5px; height: 5px; background-color: #F96326; position: absolute; border-radius: 50%; left: -120px; top: 8px;} 	
+					}
+					.active-point:hover{ cursor: pointer;
+						.point{
+							&:before{
+								content: ''; width: 35px; height: 35px; background: radial-gradient(center, rgba(235,235,235,0.1) 30% , rgba(249,99,38,1) 90%); display: block; position: absolute; border-radius: 50%; left: -15px; top: -15px;
+							}
+						}
+					}
+				}
+			}
+			.indicators{ display: flex; justify-content: center; height: 15px;
+				.indicator{padding: 5px;min-width: 0px; max-height: 0px; background-color: #b3c0c6;margin: 0px 10px; border-radius: 50%;
+				}	
+
+				.activ-indicator:hover{
+						 min-width: 10px; min-height: 10px; background-color: #f26122; cursor: pointer;
+						
+					}
+				
+			}
+			.arrow-left{}
+			.arrow-right{}
+		}
+	}
+}
