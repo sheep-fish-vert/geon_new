@@ -1,16 +1,16 @@
 .third-block{ max-width: 100%; min-height: 715px; background-color: #f5f7f8;
-	.mbox{background: url('../../images/third-block-background.jpg') no-repeat; background-size: cover; background-position: 50% 50%;
-		.slider-vraper{
-			.slide{padding: 45px 0px 0px 0px;position: relative;
-				.upper-block{ max-width: 460px; min-height: 175px; border: 10px solid #fff;padding: 29px 0px 0px 30px;
-					.up-block-header{font: 700  18px/1.2 'Open Sans';
+	.mbox{overflow: hidden;background: url('../../images/third-block-background.jpg') no-repeat; position: relative;background-size: cover; background-position: 50% 0%;
+		.slider-vraper{ overflow: hidden; width: 100%;
+			.slide{padding: 45px 0px 0px 60px;position: relative; display: inline-block; min-width: 1150px;
+				.upper-block{ max-width: 470px; min-height: 175px; border: 10px solid #fff;padding: 29px 0px 0px 30px;
+					.up-block-header{font: 700  18px/1.2 'Open Sans'; text-transform: uppercase;
 						
 					}
 					.up-block-content{padding: 10px 0px 0px 0px;font: 200 14px/1.7 'Open Sans'; 
 						
 					}
 				}
-				.central-circle{ background: url('../../images/third-block-circle.png') no-repeat; background-size: cover; max-width: 370px; min-height: 385px; border: 6px solid #2d5daa; border-radius: 50%; position: relative; z-index: 1; margin: 0 auto; top: -60px; left: -70px;font: 200 14px/1.5 'Open Sans'; 
+				.central-circle{ background: url('../../images/third-block-circle.png') no-repeat; background-size: cover; max-width: 370px; min-height: 385px; border: 6px solid #2d5daa; border-radius: 50%; position: relative; z-index: 1; margin: 0 auto; top: -60px; left: -30px;font: 200 14px/1.5 'Open Sans'; 
 					.pointer-1{position: absolute;top: 115px; left: -320px;
 						&:after{content: ''; width: 80px; height: 1px; background-color: #f96326; display: block; position: absolute; left: 315px; top: 10px;
 						}
@@ -21,17 +21,17 @@
 						}
 						.point{ width: 5px; height: 5px; background-color: #F96326; position: absolute; border-radius: 50%; left: 395px; top: 8px;} 
 					}
-					.pointer-3{position: absolute;top: 115px; left: 390px;min-width: 200px;
+					.pointer-3{position: absolute;top: 115px; left: 390px;min-width: 180px;
 						&:after{content: ''; width: 100px; height: 1px; background-color: #f96326; display: block; position: absolute; left: -110px; top: 10px;
 						}
 						.point{ width: 5px; height: 5px; background-color: #F96326; position: absolute; border-radius: 50%; left: -110px; top: 8px;} 
 					}
-					.pointer-4{position: absolute;top: 200px; left: 415px;min-width: 350px;
+					.pointer-4{position: absolute;top: 200px; left: 415px;min-width: 180px;
 						&:after{content: ''; width: 100px; height: 1px; background-color: #f96326; display: block; position: absolute; left: -110px; top: 10px;
 						}
 						.point{ width: 5px; height: 5px; background-color: #F96326; position: absolute; border-radius: 50%; left: -110px; top: 8px;} 	
 					}
-					.pointer-5{position: absolute;top: 285px; left: 415px;min-width: 200px;
+					.pointer-5{position: absolute;top: 285px; left: 415px;min-width: 150px;
 						&:after{content: ''; width: 100px; height: 1px; background-color: #f96326; display: block; position: absolute; left: -120px; top: 10px;
 						}
 						.point{ width: 5px; height: 5px; background-color: #F96326; position: absolute; border-radius: 50%; left: -120px; top: 8px;} 	
@@ -45,18 +45,42 @@
 					}
 				}
 			}
-			.indicators{ display: flex; justify-content: center; height: 15px;
-				.indicator{padding: 5px;min-width: 0px; max-height: 0px; background-color: #b3c0c6;margin: 0px 10px; border-radius: 50%;
-				}	
-
-				.activ-indicator:hover{
-						 min-width: 10px; min-height: 10px; background-color: #f26122; cursor: pointer;
-						
+			
+		}
+		.slick-dots{ display: flex; justify-content: center; height: 85px;align-items: center; bottom: -50px;
+				.slick-active{
+					button{
+						&:before{width: 12px; height: 12px;background-color: #f26122; border-radius: 50%; border: 1px solid transparent;
+						}
 					}
+				}
+				li{
+					
+					&:focus{ 
+						button{
+							&:before{width: 12px; height: 12px;background-color: #f26122; border-radius: 50%; border: 1px solid transparent;}
+						}
+					}		
+					&:hover{ 
+						button{
+							&:before{width: 12px; height: 12px;background-color: #f26122; border-radius: 50%; border: 1px solid transparent;}
+						}
+					}		
+					button{
+						&:before{content: '';width: 8px; height: 8px;background-color: #b3c0c6;border-radius: 50%; border: 6px solid transparent; padding: 0px; opacity: 1;top:25%;
+						left:25%;
+	
+						}
+					}
+				}	
 				
 			}
-			.arrow-left{}
-			.arrow-right{}
-		}
+			.slick-arrow{width: 30px; height: 30px; border: 5px solid #d4dbdf; background-color: transparent; border-top: none; border-left: none;
+				&:before{content: '';}
+			}
+			.slick-prev{  transform: rotate(135deg);position: absolute;left: 30px; top: 56%; z-index: 2;
+				
+			}
+			.slick-next{transform: rotate(-45deg);  position: absolute;right: 60px; top: 56%;z-index: 2;}
 	}
 }
