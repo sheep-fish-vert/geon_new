@@ -151,7 +151,7 @@ $(document).ready(function() {
     //oneHeightItems();
     $('.footer_placeholder').height($('.footer').outerHeight());
 
-    //goTo();
+    goTo();
     //animationBlock($('.setion-animate'));
 });
 
