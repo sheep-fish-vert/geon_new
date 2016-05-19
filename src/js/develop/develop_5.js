@@ -75,44 +75,85 @@ function arrowsSevenTabs() {
 
 
 function initMap() {
-    var uluru = {lat: -25.363, lng: 131.044};
+
+    var uluru = {lat: 55.751625, lng: 37.620875};
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
+        zoom: 10,
         center: uluru
     });
+    changeSelectToShowMapCenter(map);
+    createMarkersArray(map);
 
-    var contentString = '<div id="content">'+
-        '<div id="siteNotice">'+
-        '</div>'+
-        '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
-        '<div id="bodyContent">'+
-        '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-        'sandstone rock formation in the southern part of the '+
-        'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-        'south west of the nearest large town, Alice Springs; 450&#160;km '+
-        '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-        'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-        'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-        'Aboriginal people of the area. It has many springs, waterholes, '+
-        'rock caves and ancient paintings. Uluru is listed as a World '+
-        'Heritage Site.</p>'+
-        '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-        'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-        '(last visited June 22, 2009).</p>'+
-        '</div>'+
-        '</div>';
+}
 
-    var infowindow = new google.maps.InfoWindow({
-        content: contentString
+function createMarkersArray(map) {
+    var markerArray = [];
+    var list = 0;
+    var image = '../images/markerAPI.png';
+
+    $('footer .list').each(function () {
+        markerArray[list] = [];
+        var row = 0;
+        $(this).find('li').each(function () {
+            markerArray[list][row] = [];
+            var corX = parseFloat($(this).attr('data-corX'));
+            var corY = parseFloat($(this).attr('data-corY'));
+
+            var adres = $(this).find('.adres').text();
+            var phone = $(this).find('.phone').text();
+            markerArray[list][row].push(corX);
+            markerArray[list][row].push(corY);
+            var marker = new google.maps.Marker({
+                position: {lat: corX, lng: corY},
+                map: map,
+                title: adres,
+                icon: image
+            });
+            markerArray[list][row].push(marker);
+            var contentString = '<div class="showcase-wrap"><div class="show-case"><div class="adres">'+adres+'</div><div class="phone">тел. '+phone+'</div></div></div>';
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+            markerArray[list][row].push(infowindow);
+            marker.addListener('click', function() {
+                infowindow.open(map, marker);
+            });
+            $(this).on('click', function() {
+                if(!$(this).hasClass('active')) {
+                    $('.list li').removeClass('active');
+                    $(this).addClass('active');
+                    closeInfoAll(markerArray);
+                    infowindow.open(map, marker);
+                }
+            });
+           row++;
+
+        });
+        list++;
     });
-
-    var marker = new google.maps.Marker({
-        position: uluru,
-        map: map,
-        title: 'Uluru (Ayers Rock)'
+    console.log(markerArray);
+}
+function closeInfoAll(array) {
+    for (var i = 0; i < array.length; i++){
+        for (var j = 0; j < array[i].length; j++){
+            array[i][j][3].close();
+        }
+    }
+}
+function changeSelectToShowUl() {
+    $(document).on('change', 'footer .select-wrap select', function () {
+        var id = $(this).val();
+        $('footer .list').removeClass('active');
+        $('footer .list#'+id).addClass('active');
     });
-    marker.addListener('click', function() {
-        infowindow.open(map, marker);
+}
+function changeSelectToShowMapCenter(map) {
+    $(document).on('change', 'footer .select-wrap select', function () {
+        var corX = parseFloat( $(this).find(':selected').attr('data-corX'));
+        var corY = parseFloat( $(this).find(':selected').attr('data-corY'));
+
+        map.setCenter({lat: corX, lng: corY});
+
     });
 }
 
@@ -122,12 +163,15 @@ $(document).ready(function(){
     sliderInitSix();
     tabsSeven();
     arrowsSevenTabs();
+    changeSelectToShowUl();
+
+
 
 });
 
 $(window).load(function(){
     setTimeout(function() {
-        $('footer .select select').styler();
+        $('footer .select-wrap select').styler();
     }, 500);
 });
 
