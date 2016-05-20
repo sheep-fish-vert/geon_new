@@ -26,7 +26,7 @@ function dotController(){
 		$(this).addClass('visible');	
 	});
 }
-
+//for scroll bar
 function windowCheck(item){
 	$(window).scroll(function(){
 
@@ -45,21 +45,7 @@ function windowCheck(item){
 	})
 }
 
-// function scrollForActive(){
-//     $(window).scroll(function(event) {
-
-//         var scrolltop = $(window).scrollTop()+$('header').outerHeight();
-
-//         $('.main section').each(function(index, el) {
-//             if($(this).offset().top <= scrolltop && $(this).offset().top+$(this).outerHeight()>scrolltop){
-//                var sectID = $(this).find('.title').attr('id');
-//                $('header nav li a:not([data-href="#'+sectID+'"])').parent('li').removeClass('active');
-//                 $('header nav li a[data-href="#'+sectID+'"]').parent('li').addClass('active');
-                
-//             }
-//         });
-//     });
-// }
+//calculator for pop-up
 function CalcSum(){
 		var summ = 0;
 	$('.prices label').on("mouseup", function(){
@@ -67,9 +53,9 @@ function CalcSum(){
 		var idOfItem = $(this).attr('for');
 		
 		if($('.left-block input[id="'+idOfItem+'"]').prop('checked')){
-			$('.bottomSumm .summ').text(summ -= price);
+			$('.bottomSumm .summ').text((summ -= price)+"р");
 			console.log(summ)
-		}else{$('.bottomSumm .summ').text(summ += price);
+		}else{$('.bottomSumm .summ').text((summ += price)+"р");
 				console.log(summ);
 			}
 		})
