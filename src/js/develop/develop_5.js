@@ -75,8 +75,9 @@ function arrowsSevenTabs() {
 
 
 function initMap() {
-
-    var uluru = {lat: 55.751625, lng: 37.620875};
+    var cordX = parseFloat( $('footer .select-wrap select').find(':selected').attr('data-corX'));
+    var cordY = parseFloat( $('footer .select-wrap select').find(':selected').attr('data-corY'));
+    var uluru = {lat: cordX, lng: cordY};
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 14,
         center: uluru
