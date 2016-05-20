@@ -1,7 +1,7 @@
 /*header*/
 body{min-width: 1200px;}
     .mbox{padding: 0 15px;}
-    header{ background-image: url(../images/topbg.jpg); background-position: center top; background-size:cover;padding: 0 15px;
+    header{ background-image: url(../images/topbg.jpg); background-position: center top; background-size:cover;padding: 0 15px; position: relative; z-index: 999;
         .mbox{padding: 0;}
         .logo-phone{padding: 21px 12px 0 15px;
             .logo{ float: left;}
@@ -299,7 +299,7 @@ body{min-width: 1200px;}
 
         }
         .showcase-wrap{width: 204px; height: 96px; background-color: #78c45a;font: 400 14px/20px 'Open Sans'; color: #fff;
-            .adres{}
+            .adres{padding-bottom: 8px;}
             .phone{ font-size:12px;}
         }
         .right { display: inline-block; vertical-align: top; margin-left: -4px; width: calc(100% - 305px); height: 100%; }

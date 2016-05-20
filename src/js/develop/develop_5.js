@@ -78,11 +78,35 @@ function initMap() {
 
     var uluru = {lat: 55.751625, lng: 37.620875};
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 10,
+        zoom: 14,
         center: uluru
     });
+    var styles = [
+        {
+            stylers: [
+                { hue: "#00ffe6" },
+                { saturation: -90 }
+            ]
+        },{
+            featureType: "road",
+            elementType: "geometry",
+            stylers: [
+                { lightness: 100 },
+                { visibility: "simplified" }
+            ]
+        },{
+            featureType: "road",
+            elementType: "labels",
+            stylers: [
+                { visibility: "off" }
+            ]
+        }
+    ];
+
+    map.setOptions({styles: styles});
     changeSelectToShowMapCenter(map);
     createMarkersArray(map);
+
 
 }
 
@@ -124,6 +148,7 @@ function createMarkersArray(map) {
                     $(this).addClass('active');
                     closeInfoAll(markerArray);
                     infowindow.open(map, marker);
+                    stylingInfowindowGoogleMapApi();
                 }
             });
            row++;
@@ -156,7 +181,15 @@ function changeSelectToShowMapCenter(map) {
 
     });
 }
-
+function stylingInfowindowGoogleMapApi() {
+    var content = $('.showcase-wrap');
+    var inner3 = content.parent().parent().css({'background-color': '#78c45a'});
+    var inner2 = content.parent().parent().parent().css({'background-color': '#78c45a'});
+    var inner1 = content.parent().parent().parent().parent().css({'background-color': '#78c45a'});
+   inner2.prev().find('div:nth-child(4)').css({'background-color': '#78c45a'});
+   inner2.prev().find('div:nth-child(3)>div>div').css({'background-color': '#78c45a'});
+    inner2.next().css({'display':'none'});
+}
 $(document).ready(function(){
     tabsFour();
     tabClick();
@@ -172,6 +205,7 @@ $(document).ready(function(){
 $(window).load(function(){
     setTimeout(function() {
         $('footer .select-wrap select').styler();
+
     }, 500);
 });
 
