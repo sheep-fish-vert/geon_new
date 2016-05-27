@@ -1,7 +1,15 @@
 /*header*/
 body{min-width: 1200px;}
     .mbox{padding: 0 15px;}
-    header{ background-image: url(../images/topbg.jpg); background-position: center top; background-size:cover;padding: 0 15px; position: relative; z-index: 999;
+    header{ padding: 0 15px; position: relative; z-index: 999; 
+        .header-background{ position: absolute; left: 0px; top: 0; max-height: 648px; min-width: 1920px;
+          .spring1{ position: absolute; left: 0px; top: 0;min-width:1920px; min-height: 648px;background-image: url(../images/spring1.jpg); background-position: center top; background-size:cover}
+          .spring2{ position: absolute; left: 0px; top: 0;min-width:1920px; min-height: 648px;background-image: url(../images/spring2.jpg); background-position: center top; background-size:cover}
+          .autumn1{ position: absolute; left: 0px; top: 0;min-width:1920px; min-height: 648px;background-image: url(../images/autumn1.jpg); background-position: center top; background-size:cover}
+          .autumn2{ position: absolute; left: 0px; top: 0;min-width:1920px; min-height: 648px;background-image: url(../images/autumn2.jpg); background-position: center top; background-size:cover}
+          .summer{ position: absolute; left: 0px; top: 0;min-width:1920px; min-height: 648px;background-image: url(../images/topbg.jpg); background-position: center top; background-size:cover}
+          .winter{ position: absolute; left: 0px; top: 0;min-width:1920px; min-height: 648px;background-image: url(../images/winter.jpg); background-position: center top; background-size:cover}
+        }
         .mbox{padding: 0;}
         .logo-phone{padding: 21px 12px 0 15px;
             .logo{ float: left;}
