@@ -28,7 +28,7 @@ function fadeBackground(){
 		$('.header-background div').eq(indexLength).fadeToggle(1000);
 		if(indexLength == 0){
 			$('.header-background div').fadeIn(1000);
-			indexLength +=6 ;
+			indexLength +=4 ;
 			console.log(indexLength);
 		}
 	},6000);
