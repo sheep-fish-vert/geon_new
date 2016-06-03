@@ -171,24 +171,28 @@ body{min-width: 1200px;}
     .five{border-top: 1px solid #ff4a00;
         .title{
             h2{font: 300 48px/48px 'Open Sans'; color: #464646;    margin-top: 34px;  letter-spacing: 1px;   margin-bottom: 21px;}
-            p{font:200 20px/1.2 'Open Sans';color: #464646;padding-left: 6px;                letter-spacing: 0.5px;}
+            // p{font:200 20px/1.2 'Open Sans';color: #464646;padding-left: 6px;                letter-spacing: 0.5px;}
         }
         .left{ display: inline-block; vertical-align: top;}
         .right{ display: inline-block; width: calc(100% - 550px); vertical-align: top; padding: 0 50px 0 77px;}
         .content{
+            &.ctext{
+              &>p{font:200 20px/1.2 'Open Sans';color: #464646;padding-left: 6px;                letter-spacing: 0.5px;
+              }
+            }
             ul{padding-left: 73px;margin-top: 37px;}
             li{list-style-type: none; font:300 16px/24px 'Open Sans'; color: #767676; position: relative;padding-bottom:34px;
-                &:before{ background-position: center; content: ''; position: absolute;  left: -71px; width: 60px; height: 60px; top: calc(50% - 50px);}
+                span{ background-position: center; position: absolute;  left: -71px; width: 60px; height: 60px; top: calc(50% - 50px);}
                 b{ font-weight:600; vertical-align: top;}
                 .img{ vertical-align: top;}
                 p{ vertical-align: top; display: inline-block;letter-spacing: 0.5px;}
-                &:nth-child(1):before{ background-image: url(../images/f01.png);}
-                &:nth-child(2):before{ background-image: url(../images/f02.png);}
-                &:nth-child(3):before{ background-image: url(../images/f03.png);}
-                &:nth-child(4):before{ background-image: url(../images/f04.png);}
-                &:nth-child(5):before{ background-image: url(../images/f05.png);}
-                &:nth-child(6):before{ background-image: url(../images/f06.png);}
-                &:nth-child(7):before{ background-image: url(../images/f07.png);}
+                // &:nth-child(1) span{ background-image: url(../images/f01.png);}
+                // &:nth-child(2) span{ background-image: url(../images/f02.png);}
+                // &:nth-child(3) span{ background-image: url(../images/f03.png);}
+                // &:nth-child(4) span{ background-image: url(../images/f04.png);}
+                // &:nth-child(5) span{ background-image: url(../images/f05.png);}
+                // &:nth-child(6) span{ background-image: url(../images/f06.png);}
+                // &:nth-child(7) span{ background-image: url(../images/f07.png);}
             }
         }
     }
